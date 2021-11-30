@@ -1,0 +1,90 @@
+@import "../_variables/variables.scss";
+
+.filter {
+  grid-area: filter;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: $borderRadius;
+  width: 232px;
+  height: 252px;
+
+  ul {
+    li {
+      padding: 20px;
+      height: 40px;
+    }
+  }
+}
+
+.title {
+  line-height: 12px;
+  font-size: 12px;
+}
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox:hover {
+  background-color: #f1fcff;
+}
+
+.checkboxInput {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkboxLabel {
+  color: #4a4a4a;
+  padding-left: 25px;
+
+  font-size: 13px;
+  line-height: $lineHeightMain;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.checkboxLabel:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: white;
+  border: 1px solid #9abbce;
+  border-radius: 2px;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  z-index: 1;
+}
+
+.checkboxLabel:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background: url("../shape.svg") no-repeat;
+  background-size: 20px 20px;
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  z-index: 2;
+}
+
+.checkboxInput:checked + .checkboxLabel:before {
+  border: 1px solid #2196f3;
+}
+
+.checkboxInput:checked + .checkboxLabel:after {
+  opacity: 1;
+}

@@ -1,0 +1,27 @@
+header {
+  margin-bottom: 50px;
+}
+
+.main {
+  width: 754px;
+  margin: 0 auto;
+  justify-content: center;
+  display: grid;
+  row-gap: 21px;
+  column-gap: 21px;
+  grid-template-columns: 232px 502px;
+  // grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "filter tabs"
+    "filter list";
+}
+
+.logo {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-origin: border-box;
+  background: center url("../Logo.svg") no-repeat;
+  box-shadow: 0 8px 11px rgba(0, 0, 0, 0.25);
+}

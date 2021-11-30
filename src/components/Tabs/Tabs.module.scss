@@ -1,0 +1,42 @@
+@import "../_variables/variables.scss";
+
+.tabs {
+  grid-area: tabs;
+  border-radius: $borderRadius;
+  height: 50px;
+  border: 1px solid #dfe5ec;
+  display: flex;
+  overflow: hidden;
+
+  div {
+    width: 168px;
+    height: 50px;
+    line-height: $lineHeightMain;
+    font-weight: 600;
+    text-align: center;
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  div:hover:not(.active) {
+    background-color: #f1fcff;
+  }
+
+  div:first-child {
+    border-right: 1px solid #dfe5ec;
+  }
+
+  div:last-child {
+    border-left: 1px solid #dfe5ec;
+  }
+}
+
+.button {
+  background-color: #ffffff;
+}
+
+.active {
+  background-color: #2196f3;
+  color: #ffffff;
+}
